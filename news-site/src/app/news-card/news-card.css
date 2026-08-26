@@ -1,0 +1,48 @@
+.news-card {
+    background: rgb(235, 238, 243);
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 15px solid #000000;
+    box-shadow: 10px 11px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 70px rgba(0, 0, 0, 0.12);
+}
+
+.news-card h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.news-card p {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.news-card strong {
+    color: #111827;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #0b903e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #013002;
+    transform: translateY(-2px);
+}
