@@ -1,0 +1,22 @@
+h3 {
+    color: #333;
+}
+
+p {
+    margin: 8px 0;
+}
+
+a {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
