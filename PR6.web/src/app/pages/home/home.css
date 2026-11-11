@@ -1,0 +1,35 @@
+.home {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.home h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.home-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn.secondary {
+    background: #333;
+}

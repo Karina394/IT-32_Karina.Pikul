@@ -1,0 +1,25 @@
+<section class="movie-detail">
+
+    @if (movie) {
+    <h2>{{ movie.title }}</h2>
+
+    <p>
+        <strong>Режисер:</strong> {{ movie.director }}
+    </p>
+
+    <p>
+        <strong>Опис:</strong> {{ movie.description }}
+    </p>
+
+    <a routerLink="/movies" class="btn">
+        Повернутися до списку
+    </a>
+    } @else {
+    <h2>Фільм не знайдено</h2>
+
+    <a routerLink="/movies" class="btn">
+        Повернутися до списку
+    </a>
+    }
+
+</section>

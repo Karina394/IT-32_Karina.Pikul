@@ -1,0 +1,73 @@
+<section class="add-movie">
+    <h2>Додати новий фільм</h2>
+
+    <form #movieForm="ngForm" (ngSubmit)="addMovie(movieForm)">
+
+        <div class="form-group">
+            <label for="title">Назва фільму</label>
+
+            <input type="text" id="title" name="title" [(ngModel)]="title" #titleRef="ngModel" required minlength="3"
+                maxlength="50" placeholder="Введіть назву фільму">
+
+            @if (submitted && titleRef.invalid) {
+            <small class="error">
+                @if (titleRef.errors?.['required']) {
+                Назва фільму обов'язкова.
+                }
+                @if (titleRef.errors?.['minlength']) {
+                Мінімум 3 символи.
+                }
+                @if (titleRef.errors?.['maxlength']) {
+                Максимум 50 символів.
+                }
+            </small>
+            }
+        </div>
+
+        <div class="form-group">
+            <label for="director">Режисер</label>
+
+            <input type="text" id="director" name="director" [(ngModel)]="director" #directorRef="ngModel" required
+                minlength="3" maxlength="50" placeholder="Введіть ім'я режисера">
+
+            @if (submitted && directorRef.invalid) {
+            <small class="error">
+                @if (directorRef.errors?.['required']) {
+                Ім'я режисера обов'язкове.
+                }
+                @if (directorRef.errors?.['minlength']) {
+                Мінімум 3 символи.
+                }
+                @if (directorRef.errors?.['maxlength']) {
+                Максимум 50 символів.
+                }
+            </small>
+            }
+        </div>
+
+        <div class="form-group">
+            <label for="description">Опис фільму</label>
+
+            <textarea id="description" name="description" [(ngModel)]="description" #descriptionRef="ngModel" required
+                minlength="10" placeholder="Введіть опис фільму" rows="5"></textarea>
+
+            @if (submitted && descriptionRef.invalid) {
+            <small class="error">
+                @if (descriptionRef.errors?.['required']) {
+                Опис фільму обов'язковий.
+                }
+                @if (descriptionRef.errors?.['minlength']) {
+                Опис повинен містити мінімум 10 символів.
+                }
+            </small>
+            }
+        </div>
+
+        <button type="submit">Додати фільм</button>
+
+        <a routerLink="/movies" class="back-btn">
+            Назад до списку
+        </a>
+
+    </form>
+</section>
